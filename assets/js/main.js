@@ -23,6 +23,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
+console.log(sections)
 
 function scrollActive(){
     const scrollY = window.pageYOffset
@@ -34,6 +35,7 @@ function scrollActive(){
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
+            console.log(sectionId)
         }else{
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
         }
